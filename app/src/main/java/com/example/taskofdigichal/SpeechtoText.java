@@ -31,6 +31,7 @@ public class SpeechtoText extends AppCompatActivity {
     Button balanace;
     int count=0;
     int sum=0;
+    int sub=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,16 +121,16 @@ public class SpeechtoText extends AppCompatActivity {
              @Override
              public void onClick(View view) {
                 // List<Integer> lisst = new ArrayList<>();
-                 if(editText.getText()!=null) {
-                    int  value = sendData(editText.getText().toString());
-                    current_value.setText(String.valueOf(value));
-                 }
                  if(current_value.getText()==null){
                      current_value.setText(0);
                  }
-
-
+                 current_value.setText(current_value.getText());
+                 current_value.setText(String.valueOf(sum));
+                 current_value.setText(String.valueOf(sub));
              }
+
+
+
          });
     }
 
